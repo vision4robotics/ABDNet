@@ -1,0 +1,86 @@
+META_ARC: "HiFT_alexnet"
+
+BACKBONE:
+    TYPE: "alexnet"
+    PRETRAINED:  'alexnet-bn.pth'         
+    TRAIN_LAYERS: ['layer3','layer4','layer5'] 
+    TRAIN_EPOCH: 10 
+    LAYERS_LR: 0.1
+
+TRACK:
+    TYPE: 'HiFTtracker'
+    EXEMPLAR_SIZE: 127 #175 #143
+    INSTANCE_SIZE: 287 #399 #495 #335 #303
+    CONTEXT_AMOUNT: 0.5 
+    STRIDE: 8
+    PENALTY_K: 0.0789 #0.0789
+    WINDOW_INFLUENCE: 0.437 #0.437 #0.4373684210526316
+    LR: 0.317 #0.317#0.31666666666666665
+
+    w2: 1.02 #0.97 #1.0
+    w3: 1.0
+
+TRAIN:
+    EPOCH: 100 
+    START_EPOCH: 0  
+    BATCH_SIZE: 128
+    NUM_GPU: 2
+    BASE_LR: 0.005
+    RESUME:  ''
+    WEIGHT_DECAY : 0.0001 
+    PRETRAINED: 0
+    OUTPUT_SIZE: 11
+    NUM_WORKERS: 12
+    LOC_WEIGHT: 3.0
+    CLS_WEIGHT: 1.2
+    PD_WEIGHT: 0.1
+    w2: 1.0
+    w3: 0.6
+    w4: 1.0
+    w5: 1.0
+    w6: 0.4
+    w7: 0.4
+    POS_NUM : 16
+    TOTAL_NUM : 64
+    NEG_NUM : 16
+    LARGER: 1.0 
+    range : 1.0 
+    LR:
+        TYPE: 'log'
+        KWARGS:
+            start_lr: 0.01 
+            end_lr: 0.0001
+
+    LR_WARMUP:
+        TYPE: 'step'
+        EPOCH: 5 
+        KWARGS:
+            start_lr: 0.005
+            end_lr: 0.01
+            step: 1
+
+DATASET:
+    NAMES: 
+     - 'VID'   
+     - 'COCO'
+     - 'GOT'
+     - 'LaSOT'  
+   # - 'YOUTUBEBB'  
+
+
+    TEMPLATE:
+        SHIFT: 4 
+        SCALE: 0.05 
+        BLUR: 0.0
+        FLIP: 0.0 
+        COLOR: 1.0
+
+    SEARCH:
+        SHIFT: 64 
+        SCALE: 0.18 
+        BLUR: 0.2
+        FLIP: 0.0
+        COLOR: 1.0
+
+    NEG: 0.05
+    GRAY: 0.0
