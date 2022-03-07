@@ -30,7 +30,7 @@ Download the datasets：
 
 #### Train a model
 
-To train the FDT model, run `train.py` with the desired configs:
+To train the AFRT model, run `train.py` with the desired configs:
 
        cd tools
        python train.py
