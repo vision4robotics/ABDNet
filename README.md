@@ -1,5 +1,5 @@
-# ResamplingNet: End-to-End Adaptive Feature Resampling Network for Real-Time Aerial Tracking
-### Haobo Zuo, Changhong Fu, Sihang Li, Junjie Ye, and Guangze Zheng
+# Adversarial Blur-Deblur Network for Robust UAV Tracking
+### Haobo Zuo$^1$, Changhong Fu$^{1,*}$, Sihang Li$^1$, Kunhan Lu$^1$, Yiming Li$^2$, Chen Feng$^2$
 ## About Code
 ### 1. Environment setup
 This code has been tested on Ubuntu 18.04, Python 3.8.3, Pytorch 0.7.0/1.6.0, CUDA 10.2. Please install related libraries before running this code:
