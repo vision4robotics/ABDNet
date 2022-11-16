@@ -12,7 +12,7 @@ Download testing datasets and put them into `test_dataset` directory. If you wan
 
        python test.py 
 	        --dataset UAV123                #dataset_name
-	        --snapshot snapshot/AFRTmodel.pth  # tracker_name
+	        --snapshot snapshot/ABDNmodel.pth  # tracker_name
 	
 The testing result will be saved in the `results/dataset_name/tracker_name` directory.
 ### 3. Train
@@ -27,6 +27,8 @@ Download the datasets：
 [GOT-10K](http://got-10k.aitestunion.com/downloads)
 
 [LaSOT](http://vision.cs.stonybrook.edu/~lasot/)
+
+[VisDrone-SOT2019](http://vision.cs.stonybrook.edu/~lasot/)
 
 #### Train a model
 
