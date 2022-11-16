@@ -32,18 +32,18 @@ Download the datasets：
 
 #### Train a model
 
-To train the AFRT model, run `train.py` with the desired configs:
+To train the ABDN model, run `train.py` with the desired configs:
 
        cd tools
        python train.py
 
 ### 4. Evaluation
-We provide the tracking [results](https://pan.baidu.com/s/1d8P3O9V3I6jqDqgG2LG5Ng)(code: 6q8m) of UAV123@10fps, UAV123, and UAVTrack112_L. If you want to evaluate the tracker, please put those results into `results` directory.
+We provide the tracking [results](https://pan.baidu.com/s/1d8P3O9V3I6jqDqgG2LG5Ng)(code: 6q8m) of DTB70, UAV123@10fps, UAV123, and UAVTrack112. If you want to evaluate the tracker, please put those results into `results` directory.
 
         python eval.py 	                          \
 	         --tracker_path ./results          \ # result path
 	         --dataset UAV123                  \ # dataset_name
-	         --tracker_prefix 'AFRTmodel'   # tracker_name
+	         --tracker_prefix 'ABDNmodel'   # tracker_name
 ### 5. Contact
 If you have any questions, please contact me.
 
